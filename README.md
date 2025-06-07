@@ -1,4 +1,4 @@
-# house-prices-regression
+# House-prices-regression
 House Prices Regression : Built an XGBoost model to predict house prices (R² = 0.91). Cleaned and encoded data, handled missing values, performed feature selection and hyperparameter tuning. Evaluated with RMSE/MAE. Developed a modular, reusable Jupyter Notebook.
 ## 📌 Problem Statement
 Predict the final price of each house in the Ames Housing dataset. The dataset contains 79 explanatory variables describing (almost) every aspect of residential homes.
@@ -9,15 +9,23 @@ Predict the final price of each house in the Ames Housing dataset. The dataset c
 - Scikit-learn, XGBoost
 
 
-## 📊 Workflow
-1. **Data Cleaning**: Handled missing values (None vs 0 distinction), outlier removal.
-2. **Feature Engineering**: Label encoding for categorical features, skewness handling.
-3. **Modeling**: 
-   - Used `XGBRegressor` with hyperparameter tuning.
-   - Evaluated with `RMSE`, `MAE`, and `R² score` (Achieved R²: **0.91**).
-4. **Interpretability**: Feature importance visualization.
+## 📊 Workflow Overview
 
+1. **Data Cleaning**  
+   - Imputed missing values (context-aware: 'None' vs 0)  
+   - Removed outliers and inconsistencies  
 
+2. **Feature Engineering**  
+   - Label encoding of categorical features  
+   - Handled skewed distributions for better model accuracy  
+
+3. **Modeling**  
+   - Implemented `XGBRegressor`  
+   - Tuned hyperparameters for optimal performance  
+   - Evaluated using RMSE, MAE, and R² metrics  
+
+4. **Model Explainability**  
+   - Visualized feature importances to understand key drivers of house prices 
 
 ## 📈 Results
 - **R² Score:** 0.91
