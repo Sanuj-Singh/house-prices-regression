@@ -1,34 +1,36 @@
-# House-prices-regression
-House Prices Regression : Built an XGBoost model to predict house prices (R² = 0.91). Cleaned and encoded data, handled missing values, performed feature selection and hyperparameter tuning. Evaluated with RMSE/MAE. Developed a modular, reusable Jupyter Notebook.
-## 📌 Problem Statement
-Predict the final price of each house in the Ames Housing dataset. The dataset contains 79 explanatory variables describing (almost) every aspect of residential homes.
+# 🏡 Advanced House Price Prediction using XGBoost
 
-## 🔧 Tools & Technologies
-- Python, Jupyter Notebook
-- Pandas, NumPy, Matplotlib, Seaborn
-- Scikit-learn, XGBoost
+This project presents an end-to-end machine learning pipeline for predicting house prices using the **Ames Housing Dataset**. It integrates advanced feature engineering, correlation-based feature selection, and hyperparameter tuning using **XGBoost**, all structured within a clean and modular `scikit-learn` pipeline.
 
+---
 
-## 📊 Workflow Overview
+## 📌 Key Features
 
-1. **Data Cleaning**  
-   - Imputed missing values (context-aware: 'None' vs 0)  
-   - Removed outliers and inconsistencies  
+- ✅ **Custom Feature Engineering**: Derived meaningful features like `HouseAge`, `TotalSF`, `RemodAge`, `OverallGrade`, and more.
+- 🔍 **Feature Selection**: Retained highly correlated features using a custom correlation-based transformer.
+- 🧠 **Model Tuning**: Optimized XGBoost hyperparameters via `RandomizedSearchCV` over 50 iterations.
+- 📈 **Performance**: Achieved **R² = 0.882** and **RMSE ≈ 27,383** on the test set.
+- 🧱 **Modular Design**: Built with `Pipeline`, `BaseEstimator`, and `TransformerMixin` for clarity and reuse.
 
-2. **Feature Engineering**  
-   - Label encoding of categorical features  
-   - Handled skewed distributions for better model accuracy  
+---
 
-3. **Modeling**  
-   - Implemented `XGBRegressor`  
-   - Tuned hyperparameters for optimal performance  
-   - Evaluated using RMSE, MAE, and R² metrics  
+## 📁 Dataset
 
-4. **Model Explainability**  
-   - Visualized feature importances to understand key drivers of house prices 
+This project uses the **Ames Housing Dataset** from Kaggle:  
+🔗 [House Prices - Advanced Regression Techniques](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data)
 
-## 📈 Results
-- **R² Score:** 0.91
-- **RMSE:** ~25,740  
-- **MAE:** ~16,518
+Please download the dataset and place `train.csv` and `test.csv` in the project root directory.
 
+---
+
+## 🛠️ Tools & Technologies
+
+- Python
+- Pandas, NumPy
+- Scikit-learn
+- XGBoost
+- RandomizedSearchCV
+- Custom Transformers
+- Label Encoding
+
+---
